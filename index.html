@@ -22,12 +22,12 @@
 			<h1><b>Welcome to my website!</b></h1>
 		</div>
 		<div id="picture">
-			<a href="#contact"> <img src="C:\Users\amaro\Downloads\_Z1A8064.jpg" height="500" width="350"> </a>
+			<a href="#contact"> <img src="images/Patrick.png" height="350" width="350"> </a>
 		</div>
 
 		<div id="introduction">
 			<h2> About Me </h2>
-			<p> I am a sophomore student at DePauw University majoring in CS. I also plan to major in Economics and minor in Math and Physics</p>
+			<p> I am a senior student at DePauw University majoring in Computer Science and Mathematics.</p>
 			<!--button onclick="revealMessage()"> Click me! </button>
 			<div id="hiddenMessage" style="display:none">
 				<h3>Let's try counting down </h3>
@@ -42,7 +42,7 @@
 				<h2> Breakout </h2>
 				<figure>
 					<a href="https://github.com/patrick141/Personal-Projects-/blob/master/Breakout%20Game" target="_blank">
-						<img src="Breakout.png" alt="A breakout game created in Java." width="350" height="350">
+						<img src="images/breakout.PNG" alt="A breakout game created in Java." width="350" height="350">
 					</a>
 					<figcaption>
 						A breakout game.
@@ -53,14 +53,14 @@
 				<figure>
 				<h2> 2018 Fifa World Cup Predictior</h2>
 					<a href= "https://github.com/patrick141/Fifa-World-Cup-Simulation-Game" target="_blank" >
-						<img src="WC18.png" alt="2018 Fifa World Cup" width="600" height="200" >
+						<img src="images/WC18.PNG" alt="2018 Fifa World Cup" width="600" height="200" >
 					</a>
 					<figcaption>
 						Predict World Cup 2018 in Eclipse
 					</figcaption>
 				</figure>
 			</div>
-			<div id="Trauma">
+			<!--div id="Trauma">
 				<h2> Trauma </h2>
 				<p> I also do some filming </p>
 				<figure>
@@ -69,7 +69,7 @@
 				</video>
 				<figcaption> Here is a video that I filmed. Props to James Havrilla for the editing!</figcaption>
 				</figure>
-			</div>
+			</div-->
 			<div id="ComingSoon">
 				<h2> Coming Soon </h2>
 				<ol>
@@ -91,13 +91,13 @@
 	
 	<footer>
 		<p id="date"></p>
-		Copyright 2020 	&copy;
+		Copyright 2021 	&copy;
 		<script>
 			n =  new Date();
 			y = n.getFullYear();
 			m = n.getMonth() + 1;
 			d = n.getDate();
-			document.getElementById("date").innerHTML = "Date: " + m + "/" + d + "/" + y;
+			document.getElementById("date").innerHTML = getDate()
 		</script>
 	</footer>
 
