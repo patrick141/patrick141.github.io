@@ -1,0 +1,1 @@
+export const UNDER_MODIFICATION = "This page is under modification. Changes are to be expected";
