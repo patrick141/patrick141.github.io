@@ -4,28 +4,7 @@
     object-fit: contain; 
 }
 
-.alert {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px 20px;
-    width: calc(100% - 40px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    color: inherit;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    opacity: 0.7;
-}
+body, html {
+    margin: 0;
+    padding: 0;
+  }
