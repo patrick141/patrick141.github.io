@@ -4,16 +4,19 @@ import NavBar from "./components/NavBar/NavBar";
 import { UNDER_MODIFICATION } from "./constants";
 import ContactMe from "./components/ContactMe/ContactMe";
 import Home from "./components/Home/Home";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 function App() {
   return (
     <div className="App">
-      <h3>{UNDER_MODIFICATION}</h3>
+      <h4>{UNDER_MODIFICATION}</h4>
       <NavBar />
       <div>
         <Home />
       </div>
-      <div id="about">{/* <AboutMe />*/}</div>
+      <div id="about">
+        <AboutMe />
+      </div>
       <div id="contact">
         <ContactMe />
       </div>
