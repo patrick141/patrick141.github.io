@@ -3,14 +3,16 @@ import "./styles.css";
 import NavBar from "./components/NavBar/NavBar";
 import { UNDER_MODIFICATION } from "./constants";
 import ContactMe from "./components/ContactMe/ContactMe";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 function App() {
-
   return (
     <div className="App">
       <h3>{UNDER_MODIFICATION}</h3>
       <NavBar />
-      <img className="my-image" src="/images/Patrick.png" alt="Patrick" />
+      <div id="about">
+        <AboutMe />
+      </div>
       <div id="contact">
         <ContactMe />
       </div>
