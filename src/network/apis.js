@@ -1,21 +1,20 @@
-const API_PATH = '';
+import emailjs from '@emailjs/browser';
+const SERVICE_ID = "service_ja7uhmb";
+const TEMPLATE_ID = "template_71tx62j";
+const USER_ID = "J5mYsJ_DKbjAykEs2";
 
 export const sendContact = async (data) => {
-    fetch(API_PATH, {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }).then(
-    (response) => (response.json())
-      ).then((response)=> {
-    if (response.status === 'success') {
-      alert("Message Sent.");
-      this.resetForm()
-    } else if(response.status === 'fail') {
-      alert("Message failed to send.")
-    }
-  })
+  var templateParams = {
+    from_name: data.name,
+    email_id: data.email,
+    message: data.message,
+  };
+  emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID).then(
+    (response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    (error) => {
+      console.log('FAILED...', error);
+    },
+  );
 };

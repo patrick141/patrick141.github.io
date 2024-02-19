@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { sendContact } from "../../network/apis";
 import { isValidEmail } from "./utils";
 
@@ -6,6 +6,10 @@ const ContactMe = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const CHARACTER_LENGTH = 40;
+  const MESSAGE_LENGTH = 100;
+
   const onSubmit = (e) => {
     // TODO: implement functionality
     e.preventDefault();
@@ -20,6 +24,7 @@ const ContactMe = () => {
     };
     sendContact(data);
   };
+
   return (
     <div className="contact-me">
       <form onSubmit={onSubmit}>
@@ -31,22 +36,25 @@ const ContactMe = () => {
           className="form-control"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          maxLength={CHARACTER_LENGTH} 
         />
-        <label htmlFor="name">Email</label>
+        <label htmlFor="email">Email</label>
         <input
           type="text"
           id="email"
           className="form-control"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          maxLength={CHARACTER_LENGTH} 
         />
-        <label htmlFor="name">Message</label>
+        <label htmlFor="message">Message</label>
         <input
           type="text"
           id="message"
           className="form-control"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          maxLength={MESSAGE_LENGTH} 
         />
         <button>Send</button>
       </form>
