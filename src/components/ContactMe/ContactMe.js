@@ -11,7 +11,6 @@ const ContactMe = () => {
   const MESSAGE_LENGTH = 100;
 
   const onSubmit = (e) => {
-    // TODO: implement functionality
     e.preventDefault();
     if (!isValidEmail(email)) {
       alert("Please enter valid email");
@@ -22,7 +21,6 @@ const ContactMe = () => {
       email,
       message,
     };
-    sendContact(data);
   };
 
   return (

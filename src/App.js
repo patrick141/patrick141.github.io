@@ -5,6 +5,7 @@ import { UNDER_MODIFICATION } from "./constants";
 import ContactMe from "./components/ContactMe/ContactMe";
 import Home from "./components/Home/Home";
 import AboutMe from "./components/AboutMe/AboutMe";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       </div>
       <div id="about">
         <AboutMe />
+      </div>
+      <div id="projects">
+        <Projects />
       </div>
       <div id="contact">
         <ContactMe />

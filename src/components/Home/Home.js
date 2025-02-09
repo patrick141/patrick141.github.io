@@ -1,12 +1,13 @@
 import "./Home.css";
 
-const Home = () => {
+const Home = () => {  
+
   return (
     <div className="home">
-      <div className="image-container">
+      <div className="home-image-container">
         <img src="/images/Patrick.png" alt="Patrick" />
       </div>
-      <div className="text-container">
+      <div className="home-text-container">
         <h1>Patrick Amaro</h1>
         <h3>Software Engineer, Musician and Dog Parent</h3>
         <h4>

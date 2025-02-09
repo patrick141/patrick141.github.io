@@ -1,20 +1,18 @@
 import "./AboutMe.css";
 
 const AboutMe = () => {
-  return null;
   return <div className="about-me">
-      <div className="image-container">
-        <img src="/images/Patrick.png" alt="Patrick" />
-      </div>
-      <div className="text-container">
-        <h1>Patrick Amaro</h1>
-        <h3>Software Engineer, Musician and Dog Parent</h3>
-        <h4>
-          I am a software engineer, specializing in front end. Checkout my
-          project to learn about my work.
-        </h4>
-      </div>
   </div>;
 };
 
 export default AboutMe;
+
+/*
+ <h2>Technologies I Use</h2>
+<div class="tech-icons">
+   <img src="react-logo.png" alt="React" />
+   <img src="javascript-logo.png" alt="JavaScript" />
+   <img src="node-logo.png" alt="Node.js" />
+   <img src="aws-logo.png" alt="AWS" />
+</div>
+*/

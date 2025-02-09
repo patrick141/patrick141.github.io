@@ -7,50 +7,63 @@ body {
   background-color: #fcfcfc;
 }
 
+/* 🔹 FIX: Navbar Stays Fixed & Aligned 🔹 */
 .nav-bar {
   height: 60px;
   background-color: #fef7e5;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 10;
-  transition: top 0.3s;
-  @media (max-width: 768px) {
-    padding: 10px 0;
-  }
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 15px;
+  left: 0;
+  width: 100%; /* Ensures it spans full width */
+  z-index: 100;
   display: flex;
-  justify-content: flex-end; 
   align-items: center;
-  height: 100%;
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 0 10px;
-  }
+  padding: 0; /* No extra padding */
 }
 
+/* 🔹 FIX: Ensure Full-Width Container 🔹 */
+.container {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes menu to the right */
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2f234f;
+}
+
+/* 🔹 FIX: Move Navigation Fully to the Right 🔹 */
 .nav-elements {
-  margin-left: auto;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end; /* Ensures items are on the right */
 }
 
+/* Navigation List */
 .nav-elements ul {
   display: flex;
-  justify-content: space-between;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-elements ul li:not(:last-child) {
-  margin-right: 60px;
-  @media (max-width: 768px) {
-    margin-right: 20px;
-  }
+/* Spacing Between Items */
+.nav-elements ul li {
+  margin-right: 30px;
 }
 
+/* Remove extra spacing from the last item */
+.nav-elements ul li:last-child {
+  margin-right: 0;
+}
+
+/* Links */
 .nav-elements ul a {
   font-size: 16px;
   font-weight: 400;
@@ -58,40 +71,54 @@ body {
   text-decoration: none;
 }
 
-.nav-elements ul a.active {
-  color: #574c4c;
-  font-weight: 500;
-  position: relative;
+/* Mobile Menu Button */
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2f234f;
 }
 
-.nav-elements ul a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #574c4c;
-}
-
+/* 🔹 Mobile Formatting 🔹 */
 @media (max-width: 768px) {
-  .nav-elements ul li:not(:last-child) {
-    margin-right: 10px;
-  }
-  .nav-elements ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .nav-elements ul li {
-    margin: 0;
+  .nav-bar {
+    padding: 10px 15px;
   }
 
-  .nav-elements ul a {
-    font-size: 14px;
+  /* Hide menu initially */
+  .nav-elements {
+    display: none;
   }
-  
+
+  /* Mobile Menu Opens Correctly */
+  .nav-elements.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fef7e5;
+    padding: 15px;
+    text-align: left;
+    align-items: flex-start;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-elements.mobile-open ul {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .nav-elements.mobile-open ul li {
+    margin: 10px 0;
+  }
+
+  /* Show Mobile Menu Button */
+  .mobile-menu-icon {
+    display: block;
+  }
 }
