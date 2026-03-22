@@ -1,43 +1,68 @@
-.App {
-  text-align: center;
-  padding-top: 65px; /* Ensures Navbar Space */
-  transition: padding-top 0.3s;
+/* ── Base Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* ✅ Only Apply This to Home Section */
-.home img {
-  max-width: 90%;
-  height: auto;
-}
-
-/* ✅ Only Apply This to Projects Section */
-.projects-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Prevents entire page from having horizontal scrolling */
 body, html {
   width: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
-/* ✅ FIX: Ensure No Extra Spacing on Mobile */
-.container {
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between; /* Ensures correct alignment */
+/* ── App Shell ── */
+/* 60px navbar + 30px banner = 90px total offset */
+.App {
+  text-align: center;
+  padding-top: 90px;
+  transition: padding-top 0.3s;
 }
 
-/* ✅ Ensures Sections Don't Overflow */
+/* ── Under Construction Banner ── */
+/* Sits just below the navbar (top: 60px), above everything else */
+.under-modification-banner {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #f59e0b;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 30px;
+  z-index: 101;
+  letter-spacing: 0.3px;
+}
+
+/* ── Shared Section Wrapper ── */
 .section {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 60px 20px;
+}
+
+/* ── Shared Container (max width centering) ── */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ── Image Rules Scoped Per Section ── */
+.home img {
+  max-width: 90%;
+  height: auto;
+}
+
+.projects-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

@@ -1,1 +1,1 @@
-export const UNDER_MODIFICATION = "This page is under modification. Changes are to be expected";
+export const UNDER_MODIFICATION = true; // flip to false when ready to show

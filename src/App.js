@@ -10,9 +10,13 @@ import Projects from "./components/Projects/Projects";
 function App() {
   return (
     <div className="App">
-      <h4>{UNDER_MODIFICATION}</h4>
       <NavBar />
-      <div>
+      {UNDER_MODIFICATION && (
+        <div className="under-modification-banner">
+          🚧 Site is currently under construction — check back soon!
+        </div>
+      )}
+      <div id="home">
         <Home />
       </div>
       <div id="about">
@@ -29,20 +33,3 @@ function App() {
 }
 
 export default App;
-
-/*
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-*/

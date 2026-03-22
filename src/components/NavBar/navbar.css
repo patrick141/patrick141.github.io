@@ -7,45 +7,40 @@ body {
   background-color: #fcfcfc;
 }
 
-/* 🔹 FIX: Navbar Stays Fixed & Aligned 🔹 */
 .nav-bar {
   height: 60px;
   background-color: #fef7e5;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Ensures it spans full width */
-  z-index: 100;
+  width: 100%;
+  z-index: 102;
   display: flex;
   align-items: center;
-  padding: 0; /* No extra padding */
+  padding: 0;
 }
 
-/* 🔹 FIX: Ensure Full-Width Container 🔹 */
 .container {
   max-width: 100%;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Pushes menu to the right */
+  justify-content: space-between;
   padding: 0 20px;
 }
 
-/* Logo */
 .logo {
   font-size: 22px;
   font-weight: bold;
   color: #2f234f;
 }
 
-/* 🔹 FIX: Move Navigation Fully to the Right 🔹 */
 .nav-elements {
   flex-grow: 1;
   display: flex;
-  justify-content: flex-end; /* Ensures items are on the right */
+  justify-content: flex-end;
 }
 
-/* Navigation List */
 .nav-elements ul {
   display: flex;
   list-style-type: none;
@@ -53,17 +48,14 @@ body {
   margin: 0;
 }
 
-/* Spacing Between Items */
 .nav-elements ul li {
   margin-right: 30px;
 }
 
-/* Remove extra spacing from the last item */
 .nav-elements ul li:last-child {
   margin-right: 0;
 }
 
-/* Links */
 .nav-elements ul a {
   font-size: 16px;
   font-weight: 400;
@@ -71,7 +63,6 @@ body {
   text-decoration: none;
 }
 
-/* Mobile Menu Button */
 .mobile-menu-icon {
   display: none;
   font-size: 28px;
@@ -81,18 +72,15 @@ body {
   color: #2f234f;
 }
 
-/* 🔹 Mobile Formatting 🔹 */
 @media (max-width: 768px) {
   .nav-bar {
     padding: 10px 15px;
   }
 
-  /* Hide menu initially */
   .nav-elements {
     display: none;
   }
 
-  /* Mobile Menu Opens Correctly */
   .nav-elements.mobile-open {
     display: flex;
     flex-direction: column;
@@ -117,7 +105,6 @@ body {
     margin: 10px 0;
   }
 
-  /* Show Mobile Menu Button */
   .mobile-menu-icon {
     display: block;
   }
