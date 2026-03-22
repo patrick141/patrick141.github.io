@@ -13,10 +13,8 @@ export const sendContact = async (data) => {
 
   try {
     const response = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID);
-    console.log("SUCCESS!", response.status, response.text);
     return response;
   } catch (error) {
-    console.error("FAILED...", error);
     throw new Error("Failed to send message. Please try again later.");
   }
 };
