@@ -1,5 +1,4 @@
 import "./AboutMe.css";
-import { GITHUB_URL, LINKEDIN_URL } from "../../constants";
 
 const SKILLS = [
   {
