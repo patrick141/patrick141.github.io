@@ -24,11 +24,11 @@
 .home-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* show full image so no cropping */
+  object-fit: contain;
   object-position: center center;
   display: block;
-  background-color: #ffffff; /* match your photo background */
-  transform: scale(1.1) translateX(5%); /* nudge face right into center */
+  background-color: #ffffff;
+  transform: scale(1.1) translateX(5%);
   transform-origin: center center;
 }
 
@@ -59,11 +59,12 @@
   margin: 0 0 28px 0;
 }
 
-/* ── CTA Buttons ── */
+/* ── CTA Buttons + Social Icons Row ── */
 .home-cta-buttons {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  align-items: center; /* vertically align buttons and icons */
 }
 
 .btn {
@@ -102,6 +103,31 @@
   transform: translateY(-2px);
 }
 
+/* ── Social Icons ── */
+.home-social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: 8px; /* small gap after buttons */
+}
+
+.social-icon-btn {
+  background: none;
+  border: none;
+  color: #475569;
+  font-size: 2.2rem; /* bigger than before */
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.social-icon-btn:hover {
+  color: #2563eb;
+  transform: translateY(-3px);
+}
+
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .home {
@@ -129,5 +155,9 @@
 
   .home-cta-buttons {
     justify-content: center;
+  }
+
+  .home-social-links {
+    margin-left: 0;
   }
 }

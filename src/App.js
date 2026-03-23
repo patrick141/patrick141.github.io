@@ -6,6 +6,7 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import Home from "./components/Home/Home";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <div id="contact">
         <ContactMe />
       </div>
+      <Footer />
     </div>
   );
 }
